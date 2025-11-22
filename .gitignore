@@ -1,0 +1,30 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Bytecode / caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs & local data
+*.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Credentials (never commit real secrets)
+*.env
+.env*
+
+# Pika / RabbitMQ debug dumps (if any)
+dump_*.txt
+
+# Ignore compiled wheels or build artifacts
+build/
+dist/
+*.egg-info/

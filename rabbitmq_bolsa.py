@@ -32,7 +32,7 @@ def publicar_mensagem(channel, routing_key, mensagem):
 
 def simular_bolsa():
     """Simula um producer enviando dados da bolsa de valores."""
-    amqp_url = 'amqp://usuario:senha@servidor.cloudamqp.com/vhost'
+    amqp_url = 'amqps://rfhbbldt:zpuuvW-SjV9wISi9ZDUMbQTseA_nze6v@possum.lmq.cloudamqp.com/rfhbbldt'
     connection, channel = conectar_rabbitmq(amqp_url)
     acoes = ['PETR4', 'VALE3', 'ITUB4', 'BBDC4', 'ABEV3']
     try:
@@ -126,7 +126,7 @@ def processar_mensagem(ch, method, properties, body):
 
 def iniciar_consumer(tipo_consumer):
     """Inicia o consumer com as configurações apropriadas."""
-    amqp_url = 'amqp://usuario:senha@servidor.cloudamqp.com/vhost'
+    amqp_url = 'amqps://rfhbbldt:zpuuvW-SjV9wISi9ZDUMbQTseA_nze6v@possum.lmq.cloudamqp.com/rfhbbldt'
     if tipo_consumer == 'cotacoes':
         queue_name = 'cotacoes'
         binding_key = 'bolsa.cotacoes.#'
